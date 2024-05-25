@@ -75,6 +75,13 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;;; Font
+(if (find-font (font-spec :name "PragmataPro Mono Liga"))
+    (cond
+     ((eq system-type 'gnu/linux)
+      (setq doom-font (font-spec :family "PragmataPro Mono Liga" :size 18)
+           doom-big-font (font-spec :family "PragmataPro Mono Liga" :size 26)))))
+
 ;;; Splashscreen
 (defun splashscreen-lambda ()
   (let* ((banner '("⠀⠀⠀⠀⠀⠀⢀⣤⣶⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
